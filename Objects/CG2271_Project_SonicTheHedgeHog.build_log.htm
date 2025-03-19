@@ -1,0 +1,427 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.29.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Beverly USER, NUS, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.29.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.29.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.2.0
+Target DLL:      UL2CM3.DLL V1.163.0.0
+Dialog DLL:      TARMCM1.DLL V1.14.1.0
+ 
+<h2>Project:</h2>
+C:\00mdk\Boards\NXP\FRDM-KL25Z\Project\CG2271_Project_SonicTheHedgeHog.uvprojx
+Project File Date:  03/18/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+compiling serial_isr.c...
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(199): error:  #5: cannot open source input file "system_MKL25Z4.h": No such file or directory
+  #include "system_MKL25Z4.h"            /* Device specific configuration file */
+serial_isr.c: 0 warnings, 1 error
+compiling tLED.c...
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(115): warning:  #47-D: incompatible redefinition of macro "MCU_MEM_MAP_VERSION"  (declared at line 54 of "C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL15Z4.h")
+  #define MCU_MEM_MAP_VERSION 0x0200u
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(117): warning:  #47-D: incompatible redefinition of macro "MCU_MEM_MAP_VERSION_MINOR"  (declared at line 56 of "C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL15Z4.h")
+  #define MCU_MEM_MAP_VERSION_MINOR 0x0005u
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(132): error:  #2571: invalid redefinition of enum "IRQn"  (declared at line 69 of "C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL15Z4.h")
+  typedef enum IRQn {
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(137): error:  #101: "NonMaskableInt_IRQn" has already been declared in the current scope
+    NonMaskableInt_IRQn          = -14,              /**< Non Maskable Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(138): error:  #101: "HardFault_IRQn" has already been declared in the current scope
+    HardFault_IRQn               = -13,              /**< Cortex-M0 SV Hard Fault Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(139): error:  #101: "SVCall_IRQn" has already been declared in the current scope
+    SVCall_IRQn                  = -5,               /**< Cortex-M0 SV Call Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(140): error:  #101: "PendSV_IRQn" has already been declared in the current scope
+    PendSV_IRQn                  = -2,               /**< Cortex-M0 Pend SV Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(141): error:  #101: "SysTick_IRQn" has already been declared in the current scope
+    SysTick_IRQn                 = -1,               /**< Cortex-M0 System Tick Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(144): error:  #101: "DMA0_IRQn" has already been declared in the current scope
+    DMA0_IRQn                    = 0,                /**< DMA channel 0 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(145): error:  #101: "DMA1_IRQn" has already been declared in the current scope
+    DMA1_IRQn                    = 1,                /**< DMA channel 1 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(146): error:  #101: "DMA2_IRQn" has already been declared in the current scope
+    DMA2_IRQn                    = 2,                /**< DMA channel 2 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(147): error:  #101: "DMA3_IRQn" has already been declared in the current scope
+    DMA3_IRQn                    = 3,                /**< DMA channel 3 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(148): error:  #101: "Reserved20_IRQn" has already been declared in the current scope
+    Reserved20_IRQn              = 4,                /**< Reserved interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(149): error:  #101: "FTFA_IRQn" has already been declared in the current scope
+    FTFA_IRQn                    = 5,                /**< Command complete and read collision */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(150): error:  #101: "LVD_LVW_IRQn" has already been declared in the current scope
+    LVD_LVW_IRQn                 = 6,                /**< Low-voltage detect, low-voltage warning */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(152): error:  #101: "I2C0_IRQn" has already been declared in the current scope
+    I2C0_IRQn                    = 8,                /**< I2C0 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(153): error:  #101: "I2C1_IRQn" has already been declared in the current scope
+    I2C1_IRQn                    = 9,                /**< I2C1 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(154): error:  #101: "SPI0_IRQn" has already been declared in the current scope
+    SPI0_IRQn                    = 10,               /**< SPI0 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(155): error:  #101: "SPI1_IRQn" has already been declared in the current scope
+    SPI1_IRQn                    = 11,               /**< SPI1 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(156): error:  #101: "UART0_IRQn" has already been declared in the current scope
+    UART0_IRQn                   = 12,               /**< UART0 status and error */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(157): error:  #101: "UART1_IRQn" has already been declared in the current scope
+    UART1_IRQn                   = 13,               /**< UART1 status and error */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(158): error:  #101: "UART2_IRQn" has already been declared in the current scope
+    UART2_IRQn                   = 14,               /**< UART2 status and error */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(159): error:  #101: "ADC0_IRQn" has already been declared in the current scope
+    ADC0_IRQn                    = 15,               /**< ADC0 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(160): error:  #101: "CMP0_IRQn" has already been declared in the current scope
+    CMP0_IRQn                    = 16,               /**< CMP0 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(161): error:  #101: "TPM0_IRQn" has already been declared in the current scope
+    TPM0_IRQn                    = 17,               /**< TPM0 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(162): error:  #101: "TPM1_IRQn" has already been declared in the current scope
+    TPM1_IRQn                    = 18,               /**< TPM1 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(163): error:  #101: "TPM2_IRQn" has already been declared in the current scope
+    TPM2_IRQn                    = 19,               /**< TPM2 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(164): error:  #101: "RTC_IRQn" has already been declared in the current scope
+    RTC_IRQn                     = 20,               /**< RTC alarm */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(165): error:  #101: "RTC_Seconds_IRQn" has already been declared in the current scope
+    RTC_Seconds_IRQn             = 21,               /**< RTC seconds */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(166): error:  #101: "PIT_IRQn" has already been declared in the current scope
+    PIT_IRQn                     = 22,               /**< PIT interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(167): error:  #101: "Reserved39_IRQn" has already been declared in the current scope
+    Reserved39_IRQn              = 23,               /**< Reserved interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(168): error:  #101: "USB0_IRQn" has already been declared in the current scope
+    USB0_IRQn                    = 24,               /**< USB0 interrupt */
+tLED.c: 2 warnings, 30 errors
+compiling tMotorControl.c...
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(115): warning:  #47-D: incompatible redefinition of macro "MCU_MEM_MAP_VERSION"  (declared at line 54 of "C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL15Z4.h")
+  #define MCU_MEM_MAP_VERSION 0x0200u
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(117): warning:  #47-D: incompatible redefinition of macro "MCU_MEM_MAP_VERSION_MINOR"  (declared at line 56 of "C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL15Z4.h")
+  #define MCU_MEM_MAP_VERSION_MINOR 0x0005u
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(132): error:  #2571: invalid redefinition of enum "IRQn"  (declared at line 69 of "C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL15Z4.h")
+  typedef enum IRQn {
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(137): error:  #101: "NonMaskableInt_IRQn" has already been declared in the current scope
+    NonMaskableInt_IRQn          = -14,              /**< Non Maskable Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(138): error:  #101: "HardFault_IRQn" has already been declared in the current scope
+    HardFault_IRQn               = -13,              /**< Cortex-M0 SV Hard Fault Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(139): error:  #101: "SVCall_IRQn" has already been declared in the current scope
+    SVCall_IRQn                  = -5,               /**< Cortex-M0 SV Call Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(140): error:  #101: "PendSV_IRQn" has already been declared in the current scope
+    PendSV_IRQn                  = -2,               /**< Cortex-M0 Pend SV Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(141): error:  #101: "SysTick_IRQn" has already been declared in the current scope
+    SysTick_IRQn                 = -1,               /**< Cortex-M0 System Tick Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(144): error:  #101: "DMA0_IRQn" has already been declared in the current scope
+    DMA0_IRQn                    = 0,                /**< DMA channel 0 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(145): error:  #101: "DMA1_IRQn" has already been declared in the current scope
+    DMA1_IRQn                    = 1,                /**< DMA channel 1 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(146): error:  #101: "DMA2_IRQn" has already been declared in the current scope
+    DMA2_IRQn                    = 2,                /**< DMA channel 2 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(147): error:  #101: "DMA3_IRQn" has already been declared in the current scope
+    DMA3_IRQn                    = 3,                /**< DMA channel 3 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(148): error:  #101: "Reserved20_IRQn" has already been declared in the current scope
+    Reserved20_IRQn              = 4,                /**< Reserved interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(149): error:  #101: "FTFA_IRQn" has already been declared in the current scope
+    FTFA_IRQn                    = 5,                /**< Command complete and read collision */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(150): error:  #101: "LVD_LVW_IRQn" has already been declared in the current scope
+    LVD_LVW_IRQn                 = 6,                /**< Low-voltage detect, low-voltage warning */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(152): error:  #101: "I2C0_IRQn" has already been declared in the current scope
+    I2C0_IRQn                    = 8,                /**< I2C0 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(153): error:  #101: "I2C1_IRQn" has already been declared in the current scope
+    I2C1_IRQn                    = 9,                /**< I2C1 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(154): error:  #101: "SPI0_IRQn" has already been declared in the current scope
+    SPI0_IRQn                    = 10,               /**< SPI0 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(155): error:  #101: "SPI1_IRQn" has already been declared in the current scope
+    SPI1_IRQn                    = 11,               /**< SPI1 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(156): error:  #101: "UART0_IRQn" has already been declared in the current scope
+    UART0_IRQn                   = 12,               /**< UART0 status and error */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(157): error:  #101: "UART1_IRQn" has already been declared in the current scope
+    UART1_IRQn                   = 13,               /**< UART1 status and error */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(158): error:  #101: "UART2_IRQn" has already been declared in the current scope
+    UART2_IRQn                   = 14,               /**< UART2 status and error */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(159): error:  #101: "ADC0_IRQn" has already been declared in the current scope
+    ADC0_IRQn                    = 15,               /**< ADC0 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(160): error:  #101: "CMP0_IRQn" has already been declared in the current scope
+    CMP0_IRQn                    = 16,               /**< CMP0 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(161): error:  #101: "TPM0_IRQn" has already been declared in the current scope
+    TPM0_IRQn                    = 17,               /**< TPM0 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(162): error:  #101: "TPM1_IRQn" has already been declared in the current scope
+    TPM1_IRQn                    = 18,               /**< TPM1 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(163): error:  #101: "TPM2_IRQn" has already been declared in the current scope
+    TPM2_IRQn                    = 19,               /**< TPM2 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(164): error:  #101: "RTC_IRQn" has already been declared in the current scope
+    RTC_IRQn                     = 20,               /**< RTC alarm */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(165): error:  #101: "RTC_Seconds_IRQn" has already been declared in the current scope
+    RTC_Seconds_IRQn             = 21,               /**< RTC seconds */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(166): error:  #101: "PIT_IRQn" has already been declared in the current scope
+    PIT_IRQn                     = 22,               /**< PIT interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(167): error:  #101: "Reserved39_IRQn" has already been declared in the current scope
+    Reserved39_IRQn              = 23,               /**< Reserved interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(168): error:  #101: "USB0_IRQn" has already been declared in the current scope
+    USB0_IRQn                    = 24,               /**< USB0 interrupt */
+tMotorControl.c: 2 warnings, 30 errors
+compiling tBrain.c...
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(115): warning:  #47-D: incompatible redefinition of macro "MCU_MEM_MAP_VERSION"  (declared at line 54 of "C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL15Z4.h")
+  #define MCU_MEM_MAP_VERSION 0x0200u
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(117): warning:  #47-D: incompatible redefinition of macro "MCU_MEM_MAP_VERSION_MINOR"  (declared at line 56 of "C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL15Z4.h")
+  #define MCU_MEM_MAP_VERSION_MINOR 0x0005u
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(132): error:  #2571: invalid redefinition of enum "IRQn"  (declared at line 69 of "C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL15Z4.h")
+  typedef enum IRQn {
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(137): error:  #101: "NonMaskableInt_IRQn" has already been declared in the current scope
+    NonMaskableInt_IRQn          = -14,              /**< Non Maskable Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(138): error:  #101: "HardFault_IRQn" has already been declared in the current scope
+    HardFault_IRQn               = -13,              /**< Cortex-M0 SV Hard Fault Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(139): error:  #101: "SVCall_IRQn" has already been declared in the current scope
+    SVCall_IRQn                  = -5,               /**< Cortex-M0 SV Call Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(140): error:  #101: "PendSV_IRQn" has already been declared in the current scope
+    PendSV_IRQn                  = -2,               /**< Cortex-M0 Pend SV Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(141): error:  #101: "SysTick_IRQn" has already been declared in the current scope
+    SysTick_IRQn                 = -1,               /**< Cortex-M0 System Tick Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(144): error:  #101: "DMA0_IRQn" has already been declared in the current scope
+    DMA0_IRQn                    = 0,                /**< DMA channel 0 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(145): error:  #101: "DMA1_IRQn" has already been declared in the current scope
+    DMA1_IRQn                    = 1,                /**< DMA channel 1 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(146): error:  #101: "DMA2_IRQn" has already been declared in the current scope
+    DMA2_IRQn                    = 2,                /**< DMA channel 2 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(147): error:  #101: "DMA3_IRQn" has already been declared in the current scope
+    DMA3_IRQn                    = 3,                /**< DMA channel 3 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(148): error:  #101: "Reserved20_IRQn" has already been declared in the current scope
+    Reserved20_IRQn              = 4,                /**< Reserved interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(149): error:  #101: "FTFA_IRQn" has already been declared in the current scope
+    FTFA_IRQn                    = 5,                /**< Command complete and read collision */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(150): error:  #101: "LVD_LVW_IRQn" has already been declared in the current scope
+    LVD_LVW_IRQn                 = 6,                /**< Low-voltage detect, low-voltage warning */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(152): error:  #101: "I2C0_IRQn" has already been declared in the current scope
+    I2C0_IRQn                    = 8,                /**< I2C0 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(153): error:  #101: "I2C1_IRQn" has already been declared in the current scope
+    I2C1_IRQn                    = 9,                /**< I2C1 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(154): error:  #101: "SPI0_IRQn" has already been declared in the current scope
+    SPI0_IRQn                    = 10,               /**< SPI0 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(155): error:  #101: "SPI1_IRQn" has already been declared in the current scope
+    SPI1_IRQn                    = 11,               /**< SPI1 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(156): error:  #101: "UART0_IRQn" has already been declared in the current scope
+    UART0_IRQn                   = 12,               /**< UART0 status and error */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(157): error:  #101: "UART1_IRQn" has already been declared in the current scope
+    UART1_IRQn                   = 13,               /**< UART1 status and error */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(158): error:  #101: "UART2_IRQn" has already been declared in the current scope
+    UART2_IRQn                   = 14,               /**< UART2 status and error */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(159): error:  #101: "ADC0_IRQn" has already been declared in the current scope
+    ADC0_IRQn                    = 15,               /**< ADC0 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(160): error:  #101: "CMP0_IRQn" has already been declared in the current scope
+    CMP0_IRQn                    = 16,               /**< CMP0 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(161): error:  #101: "TPM0_IRQn" has already been declared in the current scope
+    TPM0_IRQn                    = 17,               /**< TPM0 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(162): error:  #101: "TPM1_IRQn" has already been declared in the current scope
+    TPM1_IRQn                    = 18,               /**< TPM1 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(163): error:  #101: "TPM2_IRQn" has already been declared in the current scope
+    TPM2_IRQn                    = 19,               /**< TPM2 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(164): error:  #101: "RTC_IRQn" has already been declared in the current scope
+    RTC_IRQn                     = 20,               /**< RTC alarm */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(165): error:  #101: "RTC_Seconds_IRQn" has already been declared in the current scope
+    RTC_Seconds_IRQn             = 21,               /**< RTC seconds */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(166): error:  #101: "PIT_IRQn" has already been declared in the current scope
+    PIT_IRQn                     = 22,               /**< PIT interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(167): error:  #101: "Reserved39_IRQn" has already been declared in the current scope
+    Reserved39_IRQn              = 23,               /**< Reserved interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(168): error:  #101: "USB0_IRQn" has already been declared in the current scope
+    USB0_IRQn                    = 24,               /**< USB0 interrupt */
+tBrain.c: 2 warnings, 30 errors
+compiling tAudio.c...
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(115): warning:  #47-D: incompatible redefinition of macro "MCU_MEM_MAP_VERSION"  (declared at line 54 of "C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL15Z4.h")
+  #define MCU_MEM_MAP_VERSION 0x0200u
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(117): warning:  #47-D: incompatible redefinition of macro "MCU_MEM_MAP_VERSION_MINOR"  (declared at line 56 of "C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL15Z4.h")
+  #define MCU_MEM_MAP_VERSION_MINOR 0x0005u
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(132): error:  #2571: invalid redefinition of enum "IRQn"  (declared at line 69 of "C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL15Z4.h")
+  typedef enum IRQn {
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(137): error:  #101: "NonMaskableInt_IRQn" has already been declared in the current scope
+    NonMaskableInt_IRQn          = -14,              /**< Non Maskable Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(138): error:  #101: "HardFault_IRQn" has already been declared in the current scope
+    HardFault_IRQn               = -13,              /**< Cortex-M0 SV Hard Fault Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(139): error:  #101: "SVCall_IRQn" has already been declared in the current scope
+    SVCall_IRQn                  = -5,               /**< Cortex-M0 SV Call Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(140): error:  #101: "PendSV_IRQn" has already been declared in the current scope
+    PendSV_IRQn                  = -2,               /**< Cortex-M0 Pend SV Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(141): error:  #101: "SysTick_IRQn" has already been declared in the current scope
+    SysTick_IRQn                 = -1,               /**< Cortex-M0 System Tick Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(144): error:  #101: "DMA0_IRQn" has already been declared in the current scope
+    DMA0_IRQn                    = 0,                /**< DMA channel 0 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(145): error:  #101: "DMA1_IRQn" has already been declared in the current scope
+    DMA1_IRQn                    = 1,                /**< DMA channel 1 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(146): error:  #101: "DMA2_IRQn" has already been declared in the current scope
+    DMA2_IRQn                    = 2,                /**< DMA channel 2 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(147): error:  #101: "DMA3_IRQn" has already been declared in the current scope
+    DMA3_IRQn                    = 3,                /**< DMA channel 3 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(148): error:  #101: "Reserved20_IRQn" has already been declared in the current scope
+    Reserved20_IRQn              = 4,                /**< Reserved interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(149): error:  #101: "FTFA_IRQn" has already been declared in the current scope
+    FTFA_IRQn                    = 5,                /**< Command complete and read collision */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(150): error:  #101: "LVD_LVW_IRQn" has already been declared in the current scope
+    LVD_LVW_IRQn                 = 6,                /**< Low-voltage detect, low-voltage warning */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(152): error:  #101: "I2C0_IRQn" has already been declared in the current scope
+    I2C0_IRQn                    = 8,                /**< I2C0 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(153): error:  #101: "I2C1_IRQn" has already been declared in the current scope
+    I2C1_IRQn                    = 9,                /**< I2C1 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(154): error:  #101: "SPI0_IRQn" has already been declared in the current scope
+    SPI0_IRQn                    = 10,               /**< SPI0 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(155): error:  #101: "SPI1_IRQn" has already been declared in the current scope
+    SPI1_IRQn                    = 11,               /**< SPI1 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(156): error:  #101: "UART0_IRQn" has already been declared in the current scope
+    UART0_IRQn                   = 12,               /**< UART0 status and error */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(157): error:  #101: "UART1_IRQn" has already been declared in the current scope
+    UART1_IRQn                   = 13,               /**< UART1 status and error */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(158): error:  #101: "UART2_IRQn" has already been declared in the current scope
+    UART2_IRQn                   = 14,               /**< UART2 status and error */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(159): error:  #101: "ADC0_IRQn" has already been declared in the current scope
+    ADC0_IRQn                    = 15,               /**< ADC0 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(160): error:  #101: "CMP0_IRQn" has already been declared in the current scope
+    CMP0_IRQn                    = 16,               /**< CMP0 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(161): error:  #101: "TPM0_IRQn" has already been declared in the current scope
+    TPM0_IRQn                    = 17,               /**< TPM0 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(162): error:  #101: "TPM1_IRQn" has already been declared in the current scope
+    TPM1_IRQn                    = 18,               /**< TPM1 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(163): error:  #101: "TPM2_IRQn" has already been declared in the current scope
+    TPM2_IRQn                    = 19,               /**< TPM2 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(164): error:  #101: "RTC_IRQn" has already been declared in the current scope
+    RTC_IRQn                     = 20,               /**< RTC alarm */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(165): error:  #101: "RTC_Seconds_IRQn" has already been declared in the current scope
+    RTC_Seconds_IRQn             = 21,               /**< RTC seconds */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(166): error:  #101: "PIT_IRQn" has already been declared in the current scope
+    PIT_IRQn                     = 22,               /**< PIT interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(167): error:  #101: "Reserved39_IRQn" has already been declared in the current scope
+    Reserved39_IRQn              = 23,               /**< Reserved interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(168): error:  #101: "USB0_IRQn" has already been declared in the current scope
+    USB0_IRQn                    = 24,               /**< USB0 interrupt */
+tAudio.c: 2 warnings, 30 errors
+compiling main.c...
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(115): warning:  #47-D: incompatible redefinition of macro "MCU_MEM_MAP_VERSION"  (declared at line 54 of "C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL15Z4.h")
+  #define MCU_MEM_MAP_VERSION 0x0200u
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(117): warning:  #47-D: incompatible redefinition of macro "MCU_MEM_MAP_VERSION_MINOR"  (declared at line 56 of "C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL15Z4.h")
+  #define MCU_MEM_MAP_VERSION_MINOR 0x0005u
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(132): error:  #2571: invalid redefinition of enum "IRQn"  (declared at line 69 of "C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL15Z4.h")
+  typedef enum IRQn {
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(137): error:  #101: "NonMaskableInt_IRQn" has already been declared in the current scope
+    NonMaskableInt_IRQn          = -14,              /**< Non Maskable Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(138): error:  #101: "HardFault_IRQn" has already been declared in the current scope
+    HardFault_IRQn               = -13,              /**< Cortex-M0 SV Hard Fault Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(139): error:  #101: "SVCall_IRQn" has already been declared in the current scope
+    SVCall_IRQn                  = -5,               /**< Cortex-M0 SV Call Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(140): error:  #101: "PendSV_IRQn" has already been declared in the current scope
+    PendSV_IRQn                  = -2,               /**< Cortex-M0 Pend SV Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(141): error:  #101: "SysTick_IRQn" has already been declared in the current scope
+    SysTick_IRQn                 = -1,               /**< Cortex-M0 System Tick Interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(144): error:  #101: "DMA0_IRQn" has already been declared in the current scope
+    DMA0_IRQn                    = 0,                /**< DMA channel 0 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(145): error:  #101: "DMA1_IRQn" has already been declared in the current scope
+    DMA1_IRQn                    = 1,                /**< DMA channel 1 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(146): error:  #101: "DMA2_IRQn" has already been declared in the current scope
+    DMA2_IRQn                    = 2,                /**< DMA channel 2 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(147): error:  #101: "DMA3_IRQn" has already been declared in the current scope
+    DMA3_IRQn                    = 3,                /**< DMA channel 3 transfer complete */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(148): error:  #101: "Reserved20_IRQn" has already been declared in the current scope
+    Reserved20_IRQn              = 4,                /**< Reserved interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(149): error:  #101: "FTFA_IRQn" has already been declared in the current scope
+    FTFA_IRQn                    = 5,                /**< Command complete and read collision */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(150): error:  #101: "LVD_LVW_IRQn" has already been declared in the current scope
+    LVD_LVW_IRQn                 = 6,                /**< Low-voltage detect, low-voltage warning */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(152): error:  #101: "I2C0_IRQn" has already been declared in the current scope
+    I2C0_IRQn                    = 8,                /**< I2C0 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(153): error:  #101: "I2C1_IRQn" has already been declared in the current scope
+    I2C1_IRQn                    = 9,                /**< I2C1 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(154): error:  #101: "SPI0_IRQn" has already been declared in the current scope
+    SPI0_IRQn                    = 10,               /**< SPI0 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(155): error:  #101: "SPI1_IRQn" has already been declared in the current scope
+    SPI1_IRQn                    = 11,               /**< SPI1 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(156): error:  #101: "UART0_IRQn" has already been declared in the current scope
+    UART0_IRQn                   = 12,               /**< UART0 status and error */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(157): error:  #101: "UART1_IRQn" has already been declared in the current scope
+    UART1_IRQn                   = 13,               /**< UART1 status and error */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(158): error:  #101: "UART2_IRQn" has already been declared in the current scope
+    UART2_IRQn                   = 14,               /**< UART2 status and error */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(159): error:  #101: "ADC0_IRQn" has already been declared in the current scope
+    ADC0_IRQn                    = 15,               /**< ADC0 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(160): error:  #101: "CMP0_IRQn" has already been declared in the current scope
+    CMP0_IRQn                    = 16,               /**< CMP0 interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(161): error:  #101: "TPM0_IRQn" has already been declared in the current scope
+    TPM0_IRQn                    = 17,               /**< TPM0 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(162): error:  #101: "TPM1_IRQn" has already been declared in the current scope
+    TPM1_IRQn                    = 18,               /**< TPM1 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(163): error:  #101: "TPM2_IRQn" has already been declared in the current scope
+    TPM2_IRQn                    = 19,               /**< TPM2 single interrupt vector for all sources */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(164): error:  #101: "RTC_IRQn" has already been declared in the current scope
+    RTC_IRQn                     = 20,               /**< RTC alarm */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(165): error:  #101: "RTC_Seconds_IRQn" has already been declared in the current scope
+    RTC_Seconds_IRQn             = 21,               /**< RTC seconds */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(166): error:  #101: "PIT_IRQn" has already been declared in the current scope
+    PIT_IRQn                     = 22,               /**< PIT interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(167): error:  #101: "Reserved39_IRQn" has already been declared in the current scope
+    Reserved39_IRQn              = 23,               /**< Reserved interrupt */
+C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include\MKL25Z4.h(168): error:  #101: "USB0_IRQn" has already been declared in the current scope
+    USB0_IRQn                    = 24,               /**< USB0 interrupt */
+main.c: 2 warnings, 30 errors
+compiling rtx_lib.c...
+compiling RTX_Config.c...
+assembling startup_MKL15Z4.s...
+compiling system_MKL15Z4.c...
+RTE\Device\MKL15Z128xxx4\system_MKL15Z4.c(109): warning:  #2532-D: support for trigraphs is disabled
+    /* SIM->CLKDIV1: OUTDIV1=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,OUTDIV4=2,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0 */
+RTE\Device\MKL15Z128xxx4\system_MKL15Z4.c: 1 warning, 0 errors
+".\Objects\CG2271_Project_SonicTheHedgeHog.axf" - 151 Error(s), 11 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.6.0.pack
+                ARM.CMSIS.5.6.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: RTOS2 Version: 2.1.3
+   * Component: CORE Version: 5.3.0
+   * Component: Keil RTX5 Variant: Library Version: 5.5.1
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.Kinetis_KLxx_DFP.1.15.1.pack
+                Keil.Kinetis_KLxx_DFP.1.15.1
+                NXP Kinetis KLxx Series Device Support and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\CMSIS
+  .\RTE\_Target_1
+  C:\Users\USER\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include
+  C:\Users\USER\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\Include
+  C:\Users\USER\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\Include
+  C:\Users\USER\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.1\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::CMSIS:RTOS2:2.1.3 (API)
+      Include file:  CMSIS\RTOS2\Include\cmsis_os2.h
+
+   * Component: ARM::CMSIS:CORE:5.3.0
+
+   * Component: ARM::CMSIS:RTOS2:Keil RTX5:Library:5.5.1
+      Source file:   CMSIS\RTOS2\RTX\Template\Mutex.c
+      Source file:   CMSIS\RTOS2\RTX\Template\MsgQueue.c
+      Library file:  CMSIS\RTOS2\RTX\Library\ARM\RTX_CM0.lib
+      Source file:   CMSIS\RTOS2\RTX\Template\Thread.c
+      Source file:   CMSIS\RTOS2\RTX\Template\main.c
+      Source file:   CMSIS\RTOS2\RTX\Source\rtx_lib.c
+      Source file:   CMSIS\RTOS2\RTX\Template\Semaphore.c
+      Source file:   CMSIS\RTOS2\RTX\Template\svc_user.c
+      Source file:   CMSIS\RTOS2\RTX\Template\Events.c
+      Source file:   CMSIS\RTOS2\RTX\Template\Timer.c
+      Include file:  CMSIS\RTOS2\RTX\Config\RTX_Config.h
+      Source file:   CMSIS\RTOS2\RTX\Config\RTX_Config.c
+      Source file:   CMSIS\RTOS2\RTX\Template\MemPool.c
+      Include file:  CMSIS\RTOS2\RTX\Include\rtx_os.h
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\system_MKL15Z4.c
+      Source file:   Device\Source\ARM\startup_MKL15Z4.s
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

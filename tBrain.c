@@ -23,19 +23,23 @@ void tBrain(void *argument) {
     uint8_t receivedData;
 
     for (;;) {
-        if (osMessageQueueGet(uartQueue, &receivedData, NULL, osWaitForever) == osOK) {
-            switch (receivedData) {
-                case 'F': osMessageQueuePut(motorQueue, "F", 0, 0); break;  // Move Forward
-                case 'B': osMessageQueuePut(motorQueue, "B", 0, 0); break;  // Move Backward
-                case 'L': osMessageQueuePut(motorQueue, "L", 0, 0); break;  // Turn Left
-                case 'R': osMessageQueuePut(motorQueue, "R", 0, 0); break;  // Turn Right
-                case 'S': osMessageQueuePut(motorQueue, "S", 0, 0); break;  // Stop
+        if (osMessageQueueGet(uartQueue, &command, NULL, osWaitForever) == osOK) {
+            switch (command) {
+                case 0b00000001: // Move Forward
+                case 0b00000010: // Move Backward
+                case 0b00000011: // Move Left
+                case 0b00000100: // Move Right
+                case 0b00000000: // Stop
+                    osMessageQueuePut(motorQueue, &command, 0, 0);
+                    break;
 
-                case 'M': osEventFlagsSet(ledEvent, 0x01); break;  // Moving LED pattern
-                case 'T': osEventFlagsSet(ledEvent, 0x02); break;  // Stopped LED pattern
+                case 0b10000000: // Play Final Tune
+                    osMessageQueuePut(audioQueue, &command, 0, 0);
+                    break;
 
-                case 'A': osMessageQueuePut(audioQueue, "A", 0, 0); break;  // Play song
-                case 'E': osMessageQueuePut(audioQueue, "E", 0, 0); break;  // End tone
+                case 0b11000000: // Control LEDs //NOT DONEYET
+                    osMessageQueuePut(ledQueue, &command, 0, 0);
+                    break;
             }
         }
     }

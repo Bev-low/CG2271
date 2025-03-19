@@ -8,39 +8,32 @@
 #include "MKL25Z4.h"
 
 // Declare task functions
+extern void initUART2(uint32_t baud_rate);
 extern void tBrain(void *argument);
 extern void tMotorControl(void *argument);
-extern void tLED(void *argument);
 extern void tAudio(void *argument);
+extern void tLED(void *argument);
 
-// Create RTOS resources
-osMessageQueueId_t uartQueue;
-osMessageQueueId_t motorQueue;
-osMessageQueueId_t audioQueue;
-osEventFlagsId_t ledEvent;
+osMessageQueueId_t uartQueue;  // Queue for serial data
 
 int main(void) {
     SystemCoreClockUpdate();
     osKernelInitialize();
 
-    // Create message queues
-    uartQueue = osMessageQueueNew(10, sizeof(uint8_t), NULL);
-    motorQueue = osMessageQueueNew(10, sizeof(char), NULL);
-    audioQueue = osMessageQueueNew(10, sizeof(char), NULL);
+    // Initialize UART
+    initUART2(115200);
 
-    // Create event flags
-    ledEvent = osEventFlagsNew(NULL);
+    // Create message queue for UART data
+    uartQueue = osMessageQueueNew(16, sizeof(uint8_t), NULL);
 
-    // Initialize hardware
-    initUART2(9600);
-
-    // Create RTOS tasks
+    // Create threads
     osThreadNew(tBrain, NULL, NULL);
     osThreadNew(tMotorControl, NULL, NULL);
-    osThreadNew(tLED, NULL, NULL);
     osThreadNew(tAudio, NULL, NULL);
+    osThreadNew(tLED, NULL, NULL);
 
-    osKernelStart();
-    for (;;) {}
+    osKernelStart();  // Start the RTOS kernel
+
+    for (;;) {}  // Should never reach here
 }
 
