@@ -6,19 +6,17 @@
 
 //Captures the data and pushes into a Queue for tBrain to decode
 
+/* Delay Function */
+static void delay(volatile uint32_t nof) {
+while(nof!=0) {
+__asm("NOP");
+nof--;
+}
+}
+
 
 // Define the message queue (shared with tBrain)
 extern osMessageQueueId_t uartQueue;  // Shared queue
-
-// Interrupt handler for UART receive
-void UART2_IRQHandler(void) {
-    uint8_t receivedData;
-    
-    if (UART2->S1 & UART_S1_RDRF_MASK) {  // Check if data received
-        receivedData = UART2->D;  // Read UART data
-        osMessageQueuePut(uartQueue, &receivedData, 0, 0);  // Push to queue
-    }
-}
 
 
 // UART Initialization (unchanged)
@@ -27,6 +25,8 @@ void initUART2(uint32_t baud_rate) {
 
     SIM->SCGC4 |= SIM_SCGC4_UART2_MASK;
     SIM->SCGC5 |= SIM_SCGC5_PORTE_MASK;
+	
+	  
 
     PORTE->PCR[22] &= ~PORT_PCR_MUX_MASK; //Using PORTE 22, would only need to read in
     PORTE->PCR[22] |= PORT_PCR_MUX(4);
@@ -52,4 +52,17 @@ void initUART2(uint32_t baud_rate) {
     NVIC_EnableIRQ(UART2_IRQn);
 
     UART2->C2 |= (UART_C2_TE_MASK | UART_C2_RE_MASK);
+}
+
+// Interrupt handler for UART receive
+void UART2_IRQHandler(void) {
+    uint8_t receivedData;
+    
+    if (UART2->S1 & UART_S1_RDRF_MASK) {  // Check if data received
+        receivedData = UART2->D;  // Read UART data
+			  PTB->PTOR |= (1 << 19);
+			  delay(0x80000);
+				
+        osMessageQueuePut(uartQueue, &receivedData, 0, 0);  // Push to queue
+    }
 }

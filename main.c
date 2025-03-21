@@ -12,6 +12,14 @@ extern void tLED(void *argument);
 
 osMessageQueueId_t uartQueue;  // Queue for serial data
 
+void initLED() {
+    SIM->SCGC5 |= SIM_SCGC5_PORTB_MASK;  // Enable clock for Port B
+
+    PORTB->PCR[19] &= ~PORT_PCR_MUX_MASK;
+    PORTB->PCR[19] |= PORT_PCR_MUX(1);   // Set PTB19 as GPIO
+
+    PTB->PDDR |= (1 << 19);  // Set PTB19 as output
+}
 
 int main(void) {
     SystemCoreClockUpdate();
@@ -19,6 +27,8 @@ int main(void) {
 
     // Initialize UART
     initUART2(115200);
+	
+	  initLED();
 
     // Create message queue for UART data
     uartQueue = osMessageQueueNew(16, sizeof(uint8_t), NULL);
