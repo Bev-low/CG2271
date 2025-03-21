@@ -110,7 +110,7 @@ extern "C" {
   #define DISABLE_WDOG                 1
 #endif
 
-
+#define CLOCK_SETUP 1
 
 
 /* MCG mode constants */
@@ -170,7 +170,7 @@ extern "C" {
 /* #undef FAST_TRIM_ADDRESS */                             /* Fast oscillator not trimmed. Commented out for MISRA compliance. */
 /* #undef FAST_FINE_TRIM_ADDRESS */                        /* Fast oscillator not trimmed. Commented out for MISRA compliance. */
 
-#ifdef CLOCK_SETUP
+#ifdef CLOCK_SETUP 
 #if (CLOCK_SETUP == 0)
   #define DEFAULT_SYSTEM_CLOCK         20971520u           /* Default System clock value */
   #define MCG_MODE                     MCG_MODE_FEI /* Clock generator mode */

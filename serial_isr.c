@@ -1,7 +1,7 @@
 #include "cmsis_os2.h"
 #include "MKL25Z4.h"                    // Device header
 
-#define UART2_INIT_PRIO 128
+#define UART2_INIT_PRIO 0
 
 
 //Captures the data and pushes into a Queue for tBrain to decode
