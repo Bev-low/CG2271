@@ -9,7 +9,7 @@
 /*----------------------------------------------------------------------------
  * Application main thread
  *---------------------------------------------------------------------------*/
- 
+ /*
  //Controls the LED that are connected to Freedom
  
 #include "MKL25Z4.h"
@@ -28,3 +28,4 @@ void tLED(void *argument) {
         }
     }
 }
+*/

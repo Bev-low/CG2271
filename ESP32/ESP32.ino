@@ -62,11 +62,7 @@ void onDisConnect()
 
 void setup() 
 {
-  pinMode(34, OUTPUT);
-  //pinMode(33, OUTPUT);
-  //digitalWrite(34, HIGH);
-  //delay(1000);
-  Serial2.begin(UART_BAUD_RATE, SERIAL_8N1, UART_RX_PIN, UART_TX_PIN); 
+    Serial2.begin(UART_BAUD_RATE, SERIAL_8N1, UART_RX_PIN, UART_TX_PIN); 
   Serial.begin(UART_BAUD_RATE);
 
   //ps5.attach(notify);

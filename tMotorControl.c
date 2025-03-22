@@ -1,17 +1,17 @@
 /*----------------------------------------------------------------------------
  * CMSIS-RTOS 'main' function template
  *---------------------------------------------------------------------------*/
- 
+ /*
 #include "RTE_Components.h"
 #include  CMSIS_device_header
 #include "cmsis_os2.h"
- 
+ */
 /*----------------------------------------------------------------------------
  * Application main thread
  *---------------------------------------------------------------------------*/
  
  //This reads in what to do for the motors 
- 
+ /*
 #include "MKL25Z4.h"
 #define FRONTR_F 0 //TPM1_CH0 PTB0
 #define FRONTR_B 1 //TPM1_CH1 PTB1
@@ -152,3 +152,5 @@ void tMotorControl(void *argument) {
         }
     }
 }
+
+*/
