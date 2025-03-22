@@ -11,7 +11,7 @@
  *---------------------------------------------------------------------------*/
 
 //tBrain is the main decoder and releases resources for the other areas
-
+/*
 #include "MKL25Z4.h"
 
 extern osMessageQueueId_t uartQueue;
@@ -50,3 +50,5 @@ void tBrain(void *argument) {
         }
     }
 }
+
+*/

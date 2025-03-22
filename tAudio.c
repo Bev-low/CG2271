@@ -11,10 +11,10 @@
  *---------------------------------------------------------------------------*/
  
  // Play a certian tone until it recieves the command to play continous tone
- 
+ /*
 #include "MKL25Z4.h"
 
-extern osMessageQueueId_t audioQueue;
+xtern osMessageQueueId_t audioQueue;
 
 void tAudio(void *argument) {
     char command;
@@ -29,5 +29,5 @@ void tAudio(void *argument) {
         }
     }
 }
-
+*/
 
